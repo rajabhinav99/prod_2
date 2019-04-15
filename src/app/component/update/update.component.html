@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7">
+          <h2>Update Task</h2>
+            <form  [formGroup]="editForm" (ngSubmit)="edit()">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text" formControlName="id" name="id" id="id" class="form-control"
+                      placeholder="ID" />
+                    <div *ngIf='submitted && loginForm.controls.id.invalid' class="error">
+                      <div *ngIf='loginForm.controls.id.required' class="alert alert-warning">
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" formControlName="name" name="name" id="name" class="form-control"
+                      placeholder="Name" />
+                    <div *ngIf='submitted && loginForm.controls.name.invalid' class="error">
+                      <div *ngIf='loginForm.controls.name.required' class="alert alert-warning">
+                       </div>
+                    </div>
+                  </div>
+          
+                  <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" formControlName="description" name="description" id="description" class="form-control"
+                      placeholder="Description" />
+                    <div *ngIf='submitted && loginForm.controls.description.invalid' class="error">
+                      <div *ngIf='loginForm.controls.description.required' class="alert alert-warning">
+                      </div>
+                    </div>
+                  </div>
+          
+          
+                  <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" formControlName="price" name="price" id="price" class="form-control"
+                      placeholder="Price" />
+                    <div *ngIf='submitted && loginForm.controls.price.invalid' class="error">
+                      <div *ngIf='loginForm.controls.price.required' class="alert alert-warning">
+                        </div>
+                    </div>
+                  </div>
+          
+    <button type="submit" class="btn btn-success" >submit</button>
+    <button  type="reset" class="btn btn-danger" >Cancel</button> 
+       
+  
+  
+  </form>
+  </div>
+  </div>
+  <!-- <input type="number"  -->
+  
+  </div>
